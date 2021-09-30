@@ -37,8 +37,12 @@ public class homework {
     }
 
     public static void main(String[] args) {
+
+
+        /*
         int[] arr = {7, 12, 34, 38, 40, 66, 72, 84, 99};
         System.out.println(binarySearch(arr, 0));
+        */
 
         /*
         Scanner input = new Scanner(System.in);
