@@ -1,6 +1,7 @@
 // abstract 定义抽象类
 // 抽象类不能实例化对象
 public abstract class Animal {
+
     // 可以定义普通的成员属性和方法
     private String color;
 

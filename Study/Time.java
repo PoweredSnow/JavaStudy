@@ -34,7 +34,10 @@ public class Time {
     public int minusTime(Time time) {
         int sumSeconds1 = this.hour * 3600 + this.minute * 60 + this.second;
         int sumSeconds2 = time.hour * 3600 + time.minute * 60 + time.second;
-        int result = sumSeconds2 - sumSeconds1;
-        return result;
+        if (sumSeconds1 <= sumSeconds2) {
+            return sumSeconds2 - sumSeconds1;
+        } else {
+            return sumSeconds1 - sumSeconds2;
+        }
     }
 }
