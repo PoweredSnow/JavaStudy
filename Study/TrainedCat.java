@@ -11,6 +11,12 @@ public class TrainedCat implements Trained, Comparable {
     }
 
     @Override
+    // 实现类中可以选择是否重写接口中的 defalut 方法
+    public void defaultFun() {
+        System.out.println("实现类中重写的 default 方法");
+    }
+
+    @Override
     public void compareTo(Object obj) {
         // TODO Auto-generated method stub
 

@@ -20,4 +20,19 @@ public abstract class Animal {
 
     // 可以定义抽象方法（没有具体实现，没有大括号，直接分号结束）
     public abstract void shout();
+
+    @Override
+    public boolean equals(Object obj) {
+        // 比较 this 和 obj 各个属性的值是否一致
+        if (this == obj) {
+            return true;
+        }
+        if (obj instanceof Cat) {
+            Cat cat = (Cat)obj;
+            if (!this.color.equals(cat.getColor())) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
