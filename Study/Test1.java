@@ -1,4 +1,4 @@
-public class Test {
+public class Test1 {
 
     public static double abs(double value) {
         return Double.longBitsToDouble(

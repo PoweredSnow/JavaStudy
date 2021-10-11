@@ -41,8 +41,12 @@ public class Test0 {
         //判等号比较两个引用类型的变量时，判断是否指向同一个对象
         System.out.println(cat1 == cat2);
         System.out.println(cat1.equals(cat2));
-        System.out.println(cat1);
+        System.out.println(cat1); // 输出对象时默认调用了 toString 方法
         System.out.println(cat1.toString());
+
+        String s1 = new String();
+        String s2 = new String();
+        System.out.println(s1.equals(s2));
     }
 
     public static void fun(Object obj) {

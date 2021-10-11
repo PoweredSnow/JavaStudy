@@ -35,4 +35,10 @@ public abstract class Animal {
         }
         return true;
     }
+
+    @Override
+    public String toString() {
+        // 当前对象的各个属性的值，拼接成一个字符串
+        return "颜色：" + color;
+    }
 }

@@ -1,6 +1,6 @@
 // import java.util.Scanner;
 
-public class homework {
+public class Homework {
 
     public static int generateFibonacci(int n) {
         if (n == 1) {
