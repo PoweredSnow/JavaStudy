@@ -15,6 +15,10 @@ public class Test {
                 System.out.println("参数中可以直接使用匿名内部类");
             }
         }); // 匿名内部类
+
+        // 创建静态内部类对象
+        OuterClassD.InnerClassD innerD = new OuterClassD.InnerClassD();
+        innerD.setInnerStr("innerStr");
     }
 }
 

@@ -17,7 +17,7 @@ public class OuterClassB {
         // f = 20.0f;
         // 局部内部类
         class InnerClassB {
-             // 内部类的成员属性和方法
+            // 内部类的成员属性和方法
             private String innerStr;
 
             public String getInnerStr() {
