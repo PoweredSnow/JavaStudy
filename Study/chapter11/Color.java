@@ -1,5 +1,12 @@
+// 默认继承了 Enum 类型
 public enum Color {
+    // Enum
     // 数据元素（常量）
+    // RED,
+    // BULE,
+    // GREEN();
+
+    // 枚举对象
     RED("红色", 1),
     BLUE("蓝色", 2),
     GREEN("绿色", 3);
