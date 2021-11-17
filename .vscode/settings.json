@@ -1,5 +1,3 @@
 {
-  "java.dependency.packagePresentation": "hierarchical",
-  "java.dependency.syncWithFolderExplorer": true,
-  "java.project.sourcePaths": ["HeadFirstJava", "Study", "Task04"]
+  "java.project.sourcePaths": ["task"]
 }
