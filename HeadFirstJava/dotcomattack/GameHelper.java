@@ -27,6 +27,20 @@ public class GameHelper {
         ArrayList<String> alphaCells = new ArrayList<String>();
         String [] alphacoords = new String [comSize];   // 保存字符串
         String temp = null;                             // 临时字符串
-        int [] coords = new int [comSize];
+        int [] coords = new int[comSize];               // 现有字符串
+        int attempts = 0;                               // 目前测试的字符串
+        boolean success = false;                        // 找到合适位置吗？
+        int location = 0;                               // 目前起点
+
+        comCount++;                                     // 现在处理到第n个
+        int incr = 1;                                   // 水平增量
+        if ((comCount % 2) == 1) {
+            incr = gridLength;                          // 垂直增量
+        }
+
+        while (!success & attempts++ < 200) {           // 主要搜索循环
+            location = (int) (Math.random() * gridSize);// 随机起点
+
+        }
     }
 }
