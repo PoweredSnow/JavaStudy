@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -42,7 +43,11 @@ public class ListDemo {
             System.out.println(name);
         }
 
-
+        Iterator<String> it = citys.iterator();
+        while (it.hasNext()) {
+            System.out.println("迭代器");
+            System.out.println(it.next());
+        }
 
         List<Integer> nums = new ArrayList<Integer>();
         nums.add(10);

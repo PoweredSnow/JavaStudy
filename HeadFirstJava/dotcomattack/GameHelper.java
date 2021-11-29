@@ -40,7 +40,43 @@ public class GameHelper {
 
         while (!success & attempts++ < 200) {           // 主要搜索循环
             location = (int) (Math.random() * gridSize);// 随机起点
-
+            System.out.println(" try " + location);
+            int x = 0;                                  // 第n个位置
+            success = true;                             // 假定成功
+            while (success && x < comSize) {            // 查找未使用的点
+                if (grid[location] == 0) {              // 如果没有使用
+                    coords[x++] = location;             // 存储位置
+                    location += incr;                   // 尝试下一个点
+                    if (location >= gridSize) {         // 超出下边缘
+                        success = false;                // 失败
+                    }
+                    if (x > 0 && (location % gridLength == 0)) { // 超出右边缘
+                        success = false;                // 失败
+                    }
+                } else {                                // 找到已经使用的位置
+                    System.out.println(" used " + location);
+                    success = false;                    // 失败
+                }
+            }
         }
+
+        int x = 0;
+        int row = 0;
+        int column = 0;
+        System.out.println("\n");
+        while (x < comSize) {
+            grid[coords[x]] = 1;                        // 标识格子已用
+            row = (int) (coords[x] / gridLength);       // 得到行的值
+            column = coords[x] % gridLength;            // 得到列的值
+            temp = String.valueOf(alphabet.charAt(column)); // 转换成字符串
+
+            alphaCells.add(temp.concat(Integer.toString(row)));
+            x++;
+            System.out.println(" coord " + x + " = " + alphaCells.get(x - 1));
+        }
+
+        System.out.println("\n");
+
+        return alphaCells;
     }
 }

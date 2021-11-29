@@ -18,7 +18,7 @@ public class SetDemo {
         // 不能存储重复
         citys.add("Shijiazhuang");
 
-        //删除数据
+        // 删除数据
         // citys.remove("Shijiazhuang");
 
         System.out.println(citys);
@@ -32,13 +32,37 @@ public class SetDemo {
         citys1.add("Shijiazhuang");
         System.out.println(citys1);
 
-
-        Set<String> citys2 = new TreeSet<String>();
+        TreeSet<String> citys2 = new TreeSet<String>();
         // 添加数据
         citys2.add("Beijing");
         citys2.add("Tianjin");
         citys2.add("Nanjing");
         citys2.add("Shijiazhuang");
+
         System.out.println(citys2);
+        System.out.println(citys2.first());
+
+        Book book1 = new Book("Java编程思想", 100.0f);
+        Book book2 = new Book("数据结构", 100.0f);
+        Book book3 = new Book("Web编程", 100.0f);
+        Book book4 = new Book("Java编程思想", 100.0f);
+        System.out.println(book1.equals(book2));
+        System.out.println(book1.equals(book4));
+
+        /**
+         * 存储数据时根据 equals 和 hashCode 两个方法的返回值决定是否存储该数据
+         * 如果 equals 返回 false，一定存储，hashCode 返回值相同，解决哈希冲突
+         * 如果 equals 返回 true，hashCode 相同， 不存储
+         * 如果 equals 返回 true，hashCode 不同，存储
+         */
+        Set<Book> bookSet = new HashSet<Book>();
+        bookSet.add(book1);
+        bookSet.add(book2);
+        bookSet.add(book3);
+        bookSet.add(book4);
+        System.out.println(bookSet);
+
+        System.out.println("Aa".hashCode());
+        System.out.println("BB".hashCode());
     }
 }

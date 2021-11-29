@@ -29,6 +29,27 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book [Name=" + bookName + " Price=" + price + "]";
+        return "Book[bookName=" + bookName + ", price=" + price + "]";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        } else {
+            if (obj instanceof Book) {
+                Book book = (Book) obj;
+                if (this.bookName.equals(book.bookName) && this.price == book.price) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        // 如果两个对象使用 equals 返回 false，hashCode 返回值要尽量不同
+        return (int) (this.bookName.hashCode() + price * 31);
     }
 }
